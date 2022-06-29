@@ -1,16 +1,63 @@
 import React from 'react';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Form } from 'react-bootstrap';
+import facebookLogo from '../assets/facebook (1) 2.png';
+import twitterLogo from '../assets/twitter (1) 1.png';
+import gmailLogo from '../assets/google 1.png';
 
 const Signup = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '90vh'
-      }}
-    >
-      <h1>Signup</h1>
+    /*
+         If screen >= md : display on a single row
+         else display on two rows
+    */
+    <div className="mt-5 text-center">
+      <Container fluid="md" style={{backgroundColor:"#FFF9F0",borderRadius:"15px",}}>
+        <Row>
+          <Col className='text-center mx-5'>
+            <p className='fw-bold fs-1 mt-3' style={{color:"#019267",}}>
+              Create your account
+            </p>
+            <Form className='text-start'>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fs-5">Username</Form.Label>
+                <Form.Control style={{backgroundColor:"rgba(1, 146, 103, 0.1)",}} type="text" placeholder="Enter your username" />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label className="fs-5">Email</Form.Label>
+                <Form.Control style={{backgroundColor:"rgba(1, 146, 103, 0.1)",}} type="email" placeholder="Enter your email" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fs-5">Password</Form.Label>
+                <Form.Control style={{backgroundColor:"rgba(1, 146, 103, 0.1)",}} type="password" placeholder="Type your password" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label className="fs-5">Confirm your password</Form.Label>
+                <Form.Control style={{backgroundColor:"rgba(1, 146, 103, 0.1)",}} type="password" placeholder="Retype your password" />
+              </Form.Group>
+              <div className="text-center">
+              <Button style={{ backgroundColor: "#019267", color: "eee", borderRadius: "15px" }} className="mb-3 fs-5 mt-2" type="submit">
+                Sign up
+              </Button>
+              </div>
+              
+            </Form>
+          </Col>
+          <Col className='text-center fw-bold fs-1 mt-5' style={{ borderLeft: "ridge",color:"#019267",}} >
+            <p className="mt-5 pt-5">Sign up with</p>
+            <div className='mt-4'>
+                <Row fluid>
+                  <Col className="text-md-end text-lg-end text-sm-center"><img src={facebookLogo} alt='signUpWithFacebook' /></Col>
+                  <Col><img src={twitterLogo} alt='signUpWithTwitter' /></Col>
+                  <Col className='text-md-start text-lg-start text-sm-center'><img src={gmailLogo} alt='signUpWithGmail' /></Col>
+                </Row>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
