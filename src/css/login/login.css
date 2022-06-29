@@ -1,0 +1,15 @@
+input[type="text"] {
+    background: #e4c6c7;
+    width: 50%;
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+
+textarea{
+    background: #e4c6c7;
+    border-radius: 10px;
+}
+p{
+    color: #533e85;
+}
