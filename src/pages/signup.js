@@ -42,7 +42,7 @@ const Signup = () => {
               </div>
           </Col>
           <Col className='text-center fw-bold fs-1 mt-5' style={{ color:"#019267",}} >
-            <p className="mt-5 pt-5">Sign up with</p>
+            <p className="mt-5 pt-5 pe-3">Sign up with</p>
             <div className='mt-4'>
                 <Row fluid>
                   <Col className="text-md-end text-lg-end text-sm-center"><img src={facebookLogo} alt='signUpWithFacebook' /></Col>
