@@ -6,6 +6,7 @@ import Home from './pages';
 import Contact from './pages/contact';
 import Plans from './pages/plans';
 import Community from './pages/community';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
