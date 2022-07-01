@@ -9,6 +9,7 @@ import Community from './pages/community';
 import Login from './pages/login';
 import Signup from './pages/signup';
 import ForgottenPw from './pages/forgottenpw';
+import Meals from './pages/meals';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -28,6 +29,8 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/forgotten_password' element={<ForgottenPw/>}/>
+          <Route path='/meals' element={<Meals/>}/>
+          
         </Routes>
     </Router>
   );
