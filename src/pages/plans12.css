@@ -11,13 +11,13 @@
 
 #CustomizationWrapper {
     background-color: #FFF9F0;
-    width: 70%;
+    width: 60%;
     height: 80%;
     margin: auto;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-bottom: 5%;
-    padding-top: 5%;
+    padding-top: 3%;
     border-radius: 20px;
 }
 
@@ -39,10 +39,14 @@
 #BottomSection{
     text-align: center;
     font-size: 14px;
+    display: flex;
+
 }
 
 #DetailNumbers{
     margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
 #shop:link{
@@ -72,5 +76,18 @@
 }
 
 #BottomSection {
+    width: 100%;
     margin-top: 5%;
+    display: grid;
+}
+
+.CustomButtons {
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 0mm;
+    background-color: #FFF9F0;
+}
+
+#Reder {
+    margin-bottom: 5%;
 }

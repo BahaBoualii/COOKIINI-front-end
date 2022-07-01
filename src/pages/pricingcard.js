@@ -4,18 +4,22 @@ import Card from 'react-bootstrap/Card';
 const PricingCard = (props) => {
 
     const servingPrice = 10.40;
+    const servingPriceDisplay = (servingPrice).toFixed(2);
     const primeTotal = servingPrice * props.meals * props.people;
+    const primeTotalDisplay = primeTotal ? (primeTotal).toFixed(2) : '0' ;
     const shippingPrice = 5.00;
+    const shippingPriceDisplay = (shippingPrice).toFixed(2);
     const finalTotal = primeTotal + shippingPrice;
+    const finalTotalDisplay = finalTotal ? (finalTotal).toFixed(2) : '0';
 
     return (
         <Card>
             <Card.Body>
                 <h5>
-                    <b>{props.meals}</b> meals for <b>{props.people}</b> people for this week.
+                    <b>{props.meals ? props.meals : 0}</b> meals for <b>{props.people ? props.people : 0}</b> people for this week.
                 </h5>
                 <h5>
-                    <b>{props.meals * props.people}</b> total servings
+                    <b>{props.meals * props.people ? props.meals * props.people : 0}</b> total servings
                 </h5>
                 <hr/>
                 <div id="details">
@@ -24,7 +28,7 @@ const PricingCard = (props) => {
                             Box Price
                         </div>
                         <div id="price">
-                            {primeTotal} TND
+                            {primeTotalDisplay ? primeTotalDisplay : '0'} TND
                         </div>
                     </div>
                     <div id="detail">
@@ -32,7 +36,7 @@ const PricingCard = (props) => {
                             Pricing per serving
                         </div>
                         <div id="price">
-                            {servingPrice} TND
+                            {servingPriceDisplay} TND
                         </div>
                     </div>
                     <div id="detail">
@@ -40,7 +44,7 @@ const PricingCard = (props) => {
                             Shipping
                         </div>
                         <div id="price">
-                            + {shippingPrice} TND
+                            + {shippingPriceDisplay} TND
                         </div>
                     </div>
                 </div>
@@ -49,7 +53,7 @@ const PricingCard = (props) => {
                         Total
                     </div>
                     <div id="total-price">
-                        {finalTotal} TND
+                        {finalTotalDisplay ? finalTotalDisplay : '0'} TND
                     </div>
                 </div>
             </Card.Body>

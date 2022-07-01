@@ -11,13 +11,13 @@ const Plans = () => {
   const [nbPeople, setNbPeople] = useState();
   const [nbMeals, setNbMeals] = useState();
 
-  const nbPeopleHandler = event => {
-    setNbPeople(event.target.value);
+  const nbPeopleHandler = (a) => {
+    setNbPeople(a);
     console.log(nbPeople);
   }
 
-  const nbMealsHandler = event => {
-    setNbMeals(event.target.value);
+  const nbMealsHandler = (b) => {
+    setNbMeals(b);
     console.log(nbMeals);
   }
 
@@ -35,11 +35,21 @@ const Plans = () => {
               Number of people
             </div>
             <div id = "DetailNumbers">
-              <ButtonGroup aria-label="Basic example" id='nbPeople'>
-                <Button variant="secondary" value={2} onClick={nbPeopleHandler}>2</Button>
-                <Button variant="secondary" value={4} onClick={nbPeopleHandler}>4</Button>
-                <Button variant="secondary" value={6} onClick={nbPeopleHandler}>6</Button>
-              </ButtonGroup>
+              <button className='CustomButtons' onClick={() => {
+                nbPeopleHandler(2)
+              }}>
+                <img src={require("../assets/number-2.png")} alt="two" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbPeopleHandler(4)
+              }}>
+                <img src={require("../assets/number-four.png")} alt="four" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbPeopleHandler(6)
+              }}>
+                <img src={require("../assets/six.png")} alt="six" width={"30px"} height={"30px"} />
+              </button>
             </div>
           </div>
           <div id = "OneDetailWrapper">
@@ -47,23 +57,46 @@ const Plans = () => {
               Number of meals per week
             </div>
             <div id = "DetailNumbers">
-            <ButtonGroup aria-label="Basic example" id='nbMeals'>
-                <Button variant="secondary" value={2} onClick={nbMealsHandler}>2</Button>
-                <Button variant="secondary" value={3} onClick={nbMealsHandler}>3</Button>
-                <Button variant="secondary" value={4} onClick={nbMealsHandler}>4</Button>
-                <Button variant="secondary" value={5} onClick={nbMealsHandler}>5</Button>
-                <Button variant="secondary" value={6} onClick={nbMealsHandler}>6</Button>
-              </ButtonGroup>
+            <button className='CustomButtons' onClick={() => {
+                nbMealsHandler(2)
+              }}>
+                <img src={require("../assets/number-2.png")} alt="two" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbMealsHandler(3)
+              }}>
+                <img src={require("../assets/number-3.png")} alt="three" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbMealsHandler(4)
+              }}>
+                <img src={require("../assets/number-four.png")} alt="four" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbMealsHandler(5)
+              }}>
+                <img src={require("../assets/number-5.png")} alt="five" width={"30px"} height={"30px"}/>
+              </button>
+              <button className='CustomButtons' onClick={() => {
+                nbMealsHandler(6)
+              }}>
+                <img src={require("../assets/six.png")} alt="six" width={"30px"} height={"30px"}/>
+              </button>
             </div>
           </div>
         </div>
         <PricingCard people={nbPeople} meals={nbMeals}>
         </PricingCard>
         <div id = "BottomSection">
+          <div id="Reder">
+            <a href=''>
+              <img src={require("../assets/right.png")} width={"50px"} height={"50px"}>
+              </img>
+            </a>
+          </div>
+          <div>
             <a id="shop" href=''>Want to shop without a plan ? Browse our Meals</a> 
-          <img>
-
-          </img>
+          </div>
         </div>
       </div>
       <br/>
