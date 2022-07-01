@@ -12,7 +12,7 @@ import ForgottenPw from './pages/forgottenpw';
 import Meals from './pages/meals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyBasket from './pages/mybasket';
-
+import MyProfile from './pages/myprofile';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -35,6 +35,7 @@ function App() {
           <Route path='/forgotten_password' element={<ForgottenPw/>}/>
           <Route path='/meals' element={<Meals/>}/>
           <Route path='/basket' element={<MyBasket/>}/>
+          <Route path='/profile' element={<MyProfile/>}/>
           
         </Routes>
     </Router>

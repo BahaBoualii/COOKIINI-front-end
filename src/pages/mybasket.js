@@ -10,6 +10,7 @@ import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 
 /*
     Fetch data from the DB 
+    Everything is statics
 */
 
 const MyBasket = (props) => {
@@ -153,7 +154,7 @@ const MyBasket = (props) => {
               className="fw-bold justify-content-end"
               style={{ display: "flex", alignItems: "center" }}
             >
-              <p style={{ color: "#019267" }} className="fs-5 ">
+              <p style={{ color: "#019267" }} className="fs-4 ">
                 49.98 TND
               </p>
             </Col>
