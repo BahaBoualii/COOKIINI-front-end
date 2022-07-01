@@ -1,0 +1,93 @@
+#global {
+    background-color:rgba(254, 243, 164, 0.5);
+}
+
+#title{
+    align-items: center;
+    color: #019267;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#CustomizationWrapper {
+    background-color: #FFF9F0;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
+    padding-top: 3%;
+    border-radius: 20px;
+}
+
+#DetailsWrapper{
+    margin: 10% auto;
+}
+
+#OneDetailWrapper {
+    margin: 7% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#DetailLabel {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#BottomSection{
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+
+}
+
+#DetailNumbers{
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#shop:link{
+    color: #019267;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+#shop:visited {
+    color: #019267;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+#shop:hover {
+    color: #019267;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#shop:active {
+    color: #019267;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#BottomSection {
+    width: 100%;
+    margin-top: 5%;
+    display: grid;
+}
+
+.CustomButtons {
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 0mm;
+    background-color: #FFF9F0;
+}
+
+#Reder {
+    margin-bottom: 5%;
+}

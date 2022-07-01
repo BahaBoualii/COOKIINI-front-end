@@ -1,0 +1,30 @@
+#details {
+    margin:5% auto;
+}
+
+#detail {
+    margin:2% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#price {
+    font-weight: normal;
+}
+
+#total {
+    margin:5% auto 2% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total-label {
+    font-weight: bolder;
+    color: #019267;
+    font-size: 26px;
+}
+
+#total-price {
+    font-weight: bolder;
+    font-size: 26px;
+}
