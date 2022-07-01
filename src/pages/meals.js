@@ -25,7 +25,7 @@ const Meals = () => {
       <Row fluid className="mt-5">
         <Col
           md={3}
-          lg={2}
+          lg={3}
           style={{
             borderColor: "black",
             backgroundColor: "#FFF9F0",

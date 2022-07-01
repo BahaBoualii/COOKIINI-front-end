@@ -11,6 +11,7 @@ import Signup from './pages/signup';
 import ForgottenPw from './pages/forgottenpw';
 import Meals from './pages/meals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MyBasket from './pages/mybasket';
 
 <link
   rel="stylesheet"
@@ -33,6 +34,7 @@ function App() {
           <Route path='/signup' element={<Signup/>} />
           <Route path='/forgotten_password' element={<ForgottenPw/>}/>
           <Route path='/meals' element={<Meals/>}/>
+          <Route path='/basket' element={<MyBasket/>}/>
           
         </Routes>
     </Router>
