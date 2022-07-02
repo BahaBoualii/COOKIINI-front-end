@@ -90,6 +90,7 @@ const MyProfile = (props) => {
           <p className="fs-5">{userBirthDay}</p>
         </Container>
       </div>
+      <br/><br/><br/>
       <Footer />
     </>
   );

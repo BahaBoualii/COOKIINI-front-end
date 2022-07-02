@@ -13,6 +13,9 @@ import Meals from './pages/meals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyBasket from './pages/mybasket';
 import MyProfile from './pages/myprofile';
+import DeliveryDetails from './pages/deliveryDetatils';
+import MyOrders from './pages/myorders';
+import Confirmation from './pages/confirmation';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -36,7 +39,11 @@ function App() {
           <Route path='/meals' element={<Meals/>}/>
           <Route path='/basket' element={<MyBasket/>}/>
           <Route path='/profile' element={<MyProfile/>}/>
+          <Route path='/delivery_details' element={<DeliveryDetails/>}/>
+          <Route path='/orders' element={<MyOrders/>}/>
+          <Route path='/confirmed_order' element={<Confirmation/>}/>
           
+
         </Routes>
     </Router>
   );

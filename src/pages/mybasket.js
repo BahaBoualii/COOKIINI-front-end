@@ -7,10 +7,11 @@ import PricingCard from "./pricingcard";
 import Meals from "./meals";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
+import BasketElementTemplate from "./BasketElementTemplate";
 
 /*
     Fetch data from the DB 
-    Everything is statics
+    Everything is statics 
 */
 
 const MyBasket = (props) => {
@@ -25,125 +26,8 @@ const MyBasket = (props) => {
           }}
         >
           <p className="text-start fw-bold display-4 mb-5">My Basket</p>
-          <Row className="mt-3  ">
-            <Col style={{ display: "flex", alignItems: "center" }}>
-              <p className="" style={{ fontSize: "20px" }}>
-                Delicious Meal 1
-              </p>
-            </Col>
-            <Col
-              className="fw-bolder fs-5 justify-content-end"
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <p style={{ color: "#019267" }} className="">
-                29.99 TND
-              </p>
-            </Col>
-            <Col style={{}} className="text-end">
-              <div>
-                <Button
-                  variant="secondary"
-                  className="px-2 me-1 btn btn-transparent bg-transparent fw-bold"
-                  style={{
-                    color: "#019267",
-                    border: "solid",
-                    borderRadius: "75px",
-                  }}
-                  size="sm"
-                >
-                  +
-                </Button>
-                <InputGroup
-                  size="sm"
-                  className="mb-3 w-25"
-                  style={{ display: "inline-flex", }}
-                >
-                  <Form.Control
-                    aria-label="Small"
-                    className="rounded-pill fw-bold text-center"
-                    style={{backgroundColor:"rgba(1, 146, 103, 0.5)",color:"white"}}
-                    defaultValue="1"
-                    aria-describedby="inputGroup-sizing-sm"
-                  />
-                </InputGroup>
-                <Button
-                  variant="secondary"
-                  className="px-2 ms-1 btn btn-transparent bg-transparent fw-bold"
-                  style={{
-                    color: "#019267",
-                    border: "solid",
-                    borderRadius: "75px",
-                  }}
-                  size="sm"
-                >
-                  -
-                </Button>
-              </div>
-            </Col>
-          </Row>
-          <hr />
-          <Row className="mt-3">
-            <Col style={{}}>
-              <p
-                className=""
-                style={{
-                  fontSize: "20px",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                Delicious Meal 2
-              </p>
-            </Col>
-            <Col
-              className="fw-bold fs-5 justify-content-end"
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <p style={{ color: "#019267" }}>29.99 TND</p>
-            </Col>
-            <Col style={{}} className="text-end">
-              <div>
-                <Button
-                  variant="secondary"
-                  className="px-2 me-1 btn bg-transparent fw-bold "
-                  style={{
-                    color: "#019267",
-                    border: "solid",
-                    borderRadius: "75px",
-                  }}
-                  size="sm"
-                >
-                  +
-                </Button>
-                <InputGroup
-                  size="sm"
-                  className="mb-3 w-25"
-                  style={{ display: "inline-flex", }}
-                >
-                  <Form.Control
-                    aria-label="Small"
-                    className="rounded-pill fw-bold text-center"
-                    style={{backgroundColor:"rgba(1, 146, 103, 0.5)",color:"white"}}
-                    defaultValue="1"
-                    aria-describedby="inputGroup-sizing-sm"
-                  />
-                </InputGroup>
-                <Button
-                  variant="secondary"
-                  className="px-2 ms-md-1 ms-sm-none btn btn-transparent bg-transparent fw-bold"
-                  style={{
-                    color: "#019267",
-                    border: "solid",
-                    borderRadius: "75px",
-                  }}
-                  size="sm"
-                >
-                  -
-                </Button>
-              </div>
-            </Col>
-          </Row>
-          <hr />
+          <BasketElementTemplate name={"Delicious meal 1"} price={"29.99 TND"} number={"1"}></BasketElementTemplate>
+          <BasketElementTemplate name={"Delicious meal 2"} price={"29.99 TND"} ></BasketElementTemplate>
           <Row className="mt-3">
             <Col style={{ display: "flex", alignItems: "center" }}>
               <p className="fw-bold fs-1" style={{ fontSize: "40px" }}>

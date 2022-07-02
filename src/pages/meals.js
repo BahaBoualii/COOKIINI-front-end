@@ -21,7 +21,7 @@ const Meals = () => {
             Fetch data from the DB as props for the Meals Template
     */
   return (
-    <Container>
+    <Container className="text-center">
       <Row fluid className="mt-5">
         <Col
           md={3}
@@ -31,17 +31,19 @@ const Meals = () => {
             backgroundColor: "#FFF9F0",
             borderRadius: "15px",
           }}
-          className="d-none d-md-block me-3 pb-3 pt-3 ps-3 pe-3 h-25"
+          className="d-none d-md-block ps-4 me-3 pb-3 pt-3 pe-4 h-25 w-25"
         >
-          <p className="fw-bold fs-3 text-start " style={{ color: "#019267" }}>
+          <p className="fw-bolder fs-2 text-start " style={{ color: "#019267" }}>
             Categories
           </p>
           <ul type="none" className="text-start">
-            <li className="">Category 1</li>
-            <li className="">Category 2</li>
-            <li className="">Category 3</li>
-            <li className="">Category 4</li>
-            <li className="">Category 5</li>
+            
+            <li className="fs-md-4">Category 1</li>
+            <li className="fs-md-4">Category 2</li>
+            <li className="fs-md-4">Category 3</li>
+            <li className="fs-md-4">Category 4</li>
+            <li className="fs-md-4">Category 5</li>
+            
           </ul>
           <Form.Label className="fw-bolder" style={{ color: "#019267" }}>
             Price
@@ -54,7 +56,7 @@ const Meals = () => {
               </Col>
               _
               <Col>
-                <Form.Control type="text" id="" aria-describedby="" />
+                <Form.Control type="text" id="" aria-describedby=""/>
               </Col>
             </Row>
           </div>
@@ -64,13 +66,13 @@ const Meals = () => {
           <Form.Range />
           <div className="">
             <Row>
-              <Col>
-                <Form.Control type="text" id="" aria-describedby="" />
+              <Col className>
+                <Form.Control type="text" id="" aria-describedby=""/>
               </Col>{" "}
               _
               <Col>
-                <Form.Control type="text" id="" aria-describedby="" />
-              </Col>
+                <Form.Control type="text" id="" aria-describedby=""/>
+              </Col>  
             </Row>
           </div>
         </Col>

@@ -31,7 +31,7 @@ const Plans = () => {
           <div id="DetailsWrapper">
             <div id="OneDetailWrapper">
               <div id="DetailLabel">Number of people</div>
-              <div id="DetailNumbers">
+              <div id="DetailNumbers" className="text-end">
                 <button
                   className="CustomButtons"
                   onClick={() => {
@@ -75,7 +75,7 @@ const Plans = () => {
             </div>
             <div id="OneDetailWrapper">
               <div id="DetailLabel">Number of meals per week</div>
-              <div id="DetailNumbers">
+              <div id="DetailNumbers" className="text-end me-3">
                 <button
                   className="CustomButtons"
                   onClick={() => {
