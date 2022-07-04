@@ -38,7 +38,7 @@ const MyBasket = (props) => {
               className="fw-bold justify-content-end"
               style={{ display: "flex", alignItems: "center" }}
             >
-              <p style={{ color: "#019267" }} className="fs-4 ">
+              <p style= {{ color: "#019267" }} className="fs-4 ">
                 49.98 TND
               </p>
             </Col>

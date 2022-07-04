@@ -1,7 +1,12 @@
 import React from "react";
+import { PolymerElement, html } from "@polymer/polymer";
+import "paperwave-range-slider/paperwave-range-slider.js";
+import { useState } from "react";
+import ReactStars from "react-rating-stars-component";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Rating } from "react-simple-star-rating";
 import {
   FormControl,
   FormGroup,
@@ -15,115 +20,201 @@ import {
 } from "react-bootstrap";
 import MealTempate from "./mealTempalte";
 
+const Category = (props) => {
+  return (
+    <Form.Check
+      inline
+      label={props.categName}
+      name={props.categName}
+      type="checkbox"
+      id={props.categName}
+      style={{ color: "#019267" }}
+      className="fs-md-5 fs-sm-6"
+    />
+  );
+};
+
 const Meals = () => {
   /*
         To Do :
             Fetch data from the DB as props for the Meals Template
     */
   return (
-    <Container className="text-center">
-      <Row fluid className="mt-5">
+    <Container className="text-center justify-content-center">
+      <Row fluid className="mt-5 sticky ">
         <Col
+          sticky="top"
           md={3}
-          lg={3}
+          lg={2}
           style={{
             borderColor: "black",
             backgroundColor: "#FFF9F0",
             borderRadius: "15px",
+            width: "18%",
           }}
-          className="d-none d-md-block ps-4 me-3 pb-3 pt-3 pe-4 h-25 w-25"
+          className="d-none d-lg-block ms-5 me-5 pb-3 pt-3 h-25 text-start w-md-50 pe-md-5"
         >
-          <p className="fw-bolder fs-2 text-start " style={{ color: "#019267" }}>
+          <h2
+            className="text-start ms-md-2 fw-bolder "
+            style={{ color: "#019267" }}
+          >
             Categories
-          </p>
-          <ul type="none" className="text-start">
-            
-            <li className="fs-md-4">Category 1</li>
-            <li className="fs-md-4">Category 2</li>
-            <li className="fs-md-4">Category 3</li>
-            <li className="fs-md-4">Category 4</li>
-            <li className="fs-md-4">Category 5</li>
-            
+          </h2>
+          <ul type="none" className="mt-2">
+            <li>
+              <Category categName="Category 1" />
+            </li>
+            <li>
+              <Category categName="Category 2" />
+            </li>
+            <li>
+              <Category categName="Category 3" />
+            </li>
+            <li>
+              <Category categName="Category 4" />
+            </li>
+            <li>
+              <Category categName="Category 5" />
+            </li>
+            <li>
+              <Category categName="Category 6" />
+            </li>
           </ul>
-          <Form.Label className="fw-bolder" style={{ color: "#019267" }}>
+          <p
+            style={{ color: "#019267" }}
+            className="fs-2 fw-bolder ms-md-2 d-none d-lg-block"
+          >
+            Rating
+            <span className="py-5">
+              <Rating
+                className="bg-transparent"
+                emptySymbol="fa fa-star-o fa-2x"
+                fullSymbol="fa fa-star fa-2x"
+                fractions={2}
+                transition={true}
+                allowHalfIcon={true}
+                tooltipDefaultText={true}
+              />
+            </span>
+          </p>
+          <p
+            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-lg-block"
+            style={{ color: "#019267" }}
+          >
             Price
-          </Form.Label>
-          <Form.Range />
-          <div className="">
-            <Row>
-              <Col>
-                <Form.Control type="text" id="" aria-describedby="" />
-              </Col>
-              _
-              <Col>
-                <Form.Control type="text" id="" aria-describedby=""/>
-              </Col>
-            </Row>
-          </div>
-          <Form.Label className="fw-bolder" style={{ color: "#019267" }}>
-            Cooking Time
-          </Form.Label>
-          <Form.Range />
-          <div className="">
-            <Row>
-              <Col className>
-                <Form.Control type="text" id="" aria-describedby=""/>
-              </Col>{" "}
-              _
-              <Col>
-                <Form.Control type="text" id="" aria-describedby=""/>
-              </Col>  
-            </Row>
-          </div>
+            <span>
+              <paperwave-range-slider
+                id="priceSilder"
+                min="0"
+                max="300"
+                lowValue="30"
+                highValue="90"
+                minInterval="20"
+                pin
+              ></paperwave-range-slider>
+            </span>
+          </p>
+          <p
+            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-lg-block"
+            style={{ color: "#019267" }}
+          >
+            Cooking time
+            <span>
+              <paperwave-range-slider
+                id="timeSilder"
+                min="0"
+                max="300"
+                lowValue="30"
+                highValue="90"
+                minInterval="20"
+                pin
+              ></paperwave-range-slider>
+            </span>
+          </p>
         </Col>
         <Col
           md={7}
           lg={8}
           style={{ backgroundColor: "#FFF9F0", borderRadius: "15px" }}
-          className="px-lg-1 px-md-1 ms-5"
+          className="px-lg-1 px-md-1 ms-md-3"
         >
-            <>
-          <div className="text-end d-flex justify-content-end mt-1 me-1">
-            <Form.Select aria-label="" className="w-25 text-left">
-              <option>Sort by: Lowest price</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </Form.Select>
-          </div>
+          <>
+            <div className="text-end d-flex justify-content-end mt-1 me-1">
+              <Form.Select aria-label="" className="w-25 text-left">
+                <option>Sort by: Lowest price</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+              </Form.Select>
+            </div>
           </>
           <br />
           <div className="text-center px-lg-1 ">
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate /><MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate /><MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            <MealTempate />
-            /* */
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
           </div>
         </Col>
       </Row>

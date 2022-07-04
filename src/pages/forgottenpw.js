@@ -2,7 +2,7 @@ import React from 'react';
 import { FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Form } from 'react-bootstrap';
 const ForgottenPw = () => {
   return (
-    <div className="mt-5 mx-5 px-3"
+    <div className="mt-5 mx-md-5 px-md-3"
     style={{
       display: 'flex',
       justifyContent: 'center',

@@ -36,12 +36,12 @@ const Signup = () => {
               </Form.Group>
             </Form>
             <div className="text-center">
-              <Button style={{ backgroundColor: "#019267", color: "eee", borderRadius: "15px" }} className="mb-3 fs-5 mt-2" type="submit">
+              <Button variant="secondary" style={{ backgroundColor: "#019267", color: "eee", borderRadius: "15px" }} className="mb-3 fs-5 mt-2" type="submit">
                 Sign up
               </Button>
               </div>
           </Col>
-          <Col className='text-center fw-bold fs-1 mt-5' style={{ color:"#019267",}} >
+          <Col className='text-center fw-bold fs-1 mt-sm-5 mt-xs-1' style={{ color:"#019267",}} >
             <p className="mt-5 pt-5 pe-3">Sign up with</p>
             <div className='mt-4'>
                 <Row fluid>

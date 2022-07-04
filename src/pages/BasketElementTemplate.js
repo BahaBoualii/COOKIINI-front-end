@@ -9,7 +9,20 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 
 const BasketElementTemplate = (props) => {
-  const [initialValue, setInitialValue] = useState("1");
+  const [initialValue, setInitialValue] = useState(1);
+  const incrementCount = () => {
+    setInitialValue(initialValue + 1);
+    console.log(initialValue)
+
+  };
+  const decrementCount = () => {
+    if (initialValue >= 1) {
+      setInitialValue(initialValue - 1);
+    }
+    console.log(initialValue)
+
+  };
+
   return (
     <Row className="mt-3">
       <Col style={{ display: "flex", alignItems: "center" }}>
@@ -36,7 +49,7 @@ const BasketElementTemplate = (props) => {
               borderRadius: "75px",
             }}
             size="sm"
-            onClick={setInitialValue(initialValue + 1)}
+            onClick={incrementCount}
           >
             +
           </Button>
@@ -52,19 +65,22 @@ const BasketElementTemplate = (props) => {
                 backgroundColor: "rgba(1, 146, 103, 0.5)",
                 color: "white",
               }}
-              defaultValue={initialValue}
+              // defaultValue={ initialValue.toString() }
+              placeholder={initialValue.toString()}
+              placeholderTextColor="white"
               aria-describedby="inputGroup-sizing-sm"
             />
           </InputGroup>
           <Button
             variant="secondary"
-            className="px-2 ms-1 btn btn-transparent bg-transparent fw-bold"
+            className="px-2 ms-1 btn btn-transparent bg-transparent fw-bold"x
             style={{
               color: "#019267",
               border: "solid",
-              borderRadius: "75px",
+              borderRadius: "75px", 
             }}
             size="sm"
+            onClick={decrementCount}
           >
             -
           </Button>
