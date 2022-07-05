@@ -36,9 +36,12 @@ const Category = (props) => {
 
 const Meals = () => {
   /*
-        To Do :
-            Fetch data from the DB as props for the Meals Template
-    */
+          Everything is statc      
+          Fetch data from the DB as props for the Meals Template
+  */
+
+  //To do :
+  //planChosen === true ? don't display the price : display the price
   return (
     <Container className="text-center justify-content-center">
       <Row fluid className="mt-5 sticky ">
@@ -52,7 +55,7 @@ const Meals = () => {
             borderRadius: "15px",
             width: "18%",
           }}
-          className="d-none d-lg-block ms-5 me-5 pb-3 pt-3 h-25 text-start w-md-50 pe-md-5"
+          className="d-none d-xl-block ms-5 me-5 pb-3 pt-3 h-25 text-start w-md-50 pe-md-5"
         >
           <h2
             className="text-start ms-md-2 fw-bolder "
@@ -60,7 +63,7 @@ const Meals = () => {
           >
             Categories
           </h2>
-          <ul type="none" className="mt-2">
+          <ul type="none" className="mt-2 fs-xxl-5 me-xxl-3">
             <li>
               <Category categName="Category 1" />
             </li>
@@ -82,11 +85,12 @@ const Meals = () => {
           </ul>
           <p
             style={{ color: "#019267" }}
-            className="fs-2 fw-bolder ms-md-2 d-none d-lg-block"
+            className="fs-2 fw-bolder ms-md-2 d-none d-xxl-block"
           >
             Rating
             <span className="py-5">
               <Rating
+                step="0.5"
                 className="bg-transparent"
                 emptySymbol="fa fa-star-o fa-2x"
                 fullSymbol="fa fa-star fa-2x"
@@ -98,7 +102,7 @@ const Meals = () => {
             </span>
           </p>
           <p
-            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-lg-block"
+            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-xxl-block"
             style={{ color: "#019267" }}
           >
             Price
@@ -115,7 +119,7 @@ const Meals = () => {
             </span>
           </p>
           <p
-            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-lg-block"
+            className="fs-2 fw-bolder ms-md-2 mt-3 d-none d-xxl-block"
             style={{ color: "#019267" }}
           >
             Cooking time
@@ -133,7 +137,8 @@ const Meals = () => {
           </p>
         </Col>
         <Col
-          md={7}
+          xl={8}
+          md={8}
           lg={8}
           style={{ backgroundColor: "#FFF9F0", borderRadius: "15px" }}
           className="px-lg-1 px-md-1 ms-md-3"
@@ -149,6 +154,12 @@ const Meals = () => {
           </>
           <br />
           <div className="text-center px-lg-1 ">
+            <MealTempate
+              calories="450"
+              raters="3520"
+              rating="4.5"
+              time="30 min"
+            />
             <MealTempate
               calories="450"
               raters="3520"

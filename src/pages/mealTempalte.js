@@ -6,6 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import foodImage from "../assets/meal.png";
 import "../css/Meal/meal.css";
+import caloriesOnHover from "../assets/caloriesOnHover.png";
+import ratingOnHover from "../assets/ratingOnHover.png";
+import timeOnHover from "../assets/timeOnHover.png";
+
 import {
   FormControl,
   FormGroup,
@@ -31,12 +35,12 @@ const MealTempate = (props) => {
       <Card
         style={{
           display: "inline-flex",
-          width: "220px",
+          width: "260px",
           height: "260px",
           borderRadius: "15px",
           backgroundColor: "rgba(1, 146, 103, 0.2)",
         }}
-        className="mx-md-3 mx-sm-1 mb-1"
+        className="mx-md-2 mx-sm-1 mb-5"
         onMouseEnter={() => {
           setIsHovered(true);
         }}
@@ -45,7 +49,7 @@ const MealTempate = (props) => {
         }}
       >
         <div className="containerImg">
-          <div style={{ marginTop: "-15px", marginLeft: "205px" }}>
+          <div style={{ marginTop: "-16px", marginLeft: "240px" }}>
             <div
               className="text-end "
               style={{
@@ -53,7 +57,7 @@ const MealTempate = (props) => {
               }}
             >
               <Badge
-                className="rounded-pill fw-bold fs-5 addToBasketBtn"
+                className="rounded-pill fw-bold addToBasketBtn fs-6 py-1 px-2 "
                 bg="dark"
               >
                 +
@@ -65,32 +69,32 @@ const MealTempate = (props) => {
             // Image directory fetched from DB
             src={foodImage}
             className="justify-content-center fluid px-3 pb-4 image "
-            style={{ height: "220px", width: "220px" }}
+            style={{ height: "220px", width: "260px" }}
           />
           <div className="middle">
             <div className="text">
               <table>
                 <tr>
                   <td>
-                    <img src="img/Mask group.png" class="img-fluid" />
+                    <img src={timeOnHover} class="img-fluid px-2" />
                   </td>
-                  <td class="text-start                                                                                                                                                             px-1">
+                  <td className="text-start">
                     <b>{props.time}</b>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <img src="img/Mask group (2).png" class="img-fluid" />
+                    <img src={caloriesOnHover} class="img-fluid px-2" />
                   </td>
-                  <td class="text-start px-1">
+                  <td class="text-start">
                     <b>{props.calories}Kcal</b>
                   </td>
                 </tr>
                 <tr>
                   <td>     
-                    <img src="img/Mask group 3.png" class="img-fluid" />
+                    <img src={ratingOnHover} class="img-fluid px-2" />
                   </td>
-                  <td class="text-start px-1">
+                  <td class="text-start pt-1">
                     <b>
                       {props.rating}/5 <br />
                       <span style={{ fontSize: "10px", color: "black" }}>

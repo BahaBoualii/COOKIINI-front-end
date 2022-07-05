@@ -16,6 +16,7 @@ import MyProfile from './pages/myprofile';
 import DeliveryDetails from './pages/deliveryDetatils';
 import MyOrders from './pages/myorders';
 import Confirmation from './pages/confirmation';
+import MealDetails from './pages/mealDetatils';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -42,6 +43,7 @@ function App() {
           <Route path='/delivery_details' element={<DeliveryDetails/>}/>
           <Route path='/orders' element={<MyOrders/>}/>
           <Route path='/confirmed_order' element={<Confirmation/>}/>
+          <Route path='/mealname_details' element={<MealDetails/>}/>
           
 
         </Routes>

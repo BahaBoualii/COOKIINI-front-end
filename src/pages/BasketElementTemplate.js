@@ -7,26 +7,11 @@ import PricingCard from "./pricingcard";
 import Meals from "./meals";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
-
 const BasketElementTemplate = (props) => {
-  const [initialValue, setInitialValue] = useState(1);
-  const incrementCount = () => {
-    setInitialValue(initialValue + 1);
-    console.log(initialValue)
-
-  };
-  const decrementCount = () => {
-    if (initialValue >= 1) {
-      setInitialValue(initialValue - 1);
-    }
-    console.log(initialValue)
-
-  };
-
   return (
     <Row className="mt-3">
       <Col style={{ display: "flex", alignItems: "center" }}>
-        <p className="" style={{ fontSize: "20px" }}>
+        <p className="" style={{ fontSize: "28px" }}>
           {props.name}
         </p>
       </Col>
@@ -34,57 +19,12 @@ const BasketElementTemplate = (props) => {
         className="fw-bolder fs-5 justify-content-end"
         style={{ display: "flex", alignItems: "center" }}
       >
-        <p style={{ color: "#019267" }} className="">
+        <p style={{ color: "#019267" }} className="fs-4">
           {props.price}
         </p>
       </Col>
       <Col style={{}} className="text-end">
-        <div>
-          <Button
-            variant="secondary"
-            className="px-2 me-1 btn btn-transparent bg-transparent fw-bold"
-            style={{
-              color: "#019267",
-              border: "solid",
-              borderRadius: "75px",
-            }}
-            size="sm"
-            onClick={incrementCount}
-          >
-            +
-          </Button>
-          <InputGroup
-            size="sm"
-            className="mb-3 w-25"
-            style={{ display: "inline-flex" }}
-          >
-            <Form.Control
-              aria-label="Small"
-              className="rounded-pill fw-bold text-center"
-              style={{
-                backgroundColor: "rgba(1, 146, 103, 0.5)",
-                color: "white",
-              }}
-              // defaultValue={ initialValue.toString() }
-              placeholder={initialValue.toString()}
-              placeholderTextColor="white"
-              aria-describedby="inputGroup-sizing-sm"
-            />
-          </InputGroup>
-          <Button
-            variant="secondary"
-            className="px-2 ms-1 btn btn-transparent bg-transparent fw-bold"x
-            style={{
-              color: "#019267",
-              border: "solid",
-              borderRadius: "75px", 
-            }}
-            size="sm"
-            onClick={decrementCount}
-          >
-            -
-          </Button>
-        </div>
+        <p className="fs-4">for <span className="fw-bolder">{props.peopleNbr}</span>  people</p>
       </Col>
       <hr />
     </Row>

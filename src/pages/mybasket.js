@@ -26,8 +26,8 @@ const MyBasket = (props) => {
           }}
         >
           <p className="text-start fw-bold display-4 mb-5">My Basket</p>
-          <BasketElementTemplate name={"Delicious meal 1"} price={"29.99 TND"} number={"1"}></BasketElementTemplate>
-          <BasketElementTemplate name={"Delicious meal 2"} price={"29.99 TND"} ></BasketElementTemplate>
+          <BasketElementTemplate name={"Delicious meal 1"} price={"19.99TND"} number={"1"} peopleNbr={"2"}></BasketElementTemplate>
+          <BasketElementTemplate name={"Delicious meal 2"} price={""} peopleNbr={"4"}></BasketElementTemplate>
           <Row className="mt-3">
             <Col style={{ display: "flex", alignItems: "center" }}>
               <p className="fw-bold fs-1" style={{ fontSize: "40px" }}>
