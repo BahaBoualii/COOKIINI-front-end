@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Footer from "../footer";
-import Popover from 'react-bootstrap/Popover';
-import Overlay from 'react-bootstrap/Overlay';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import Popover from "react-bootstrap/Popover";
+import Overlay from "react-bootstrap/Overlay";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import PricingCard from "./pricingcard";
@@ -71,12 +71,7 @@ const MealDetails = () => {
     <Popover id="popover-basic">
       <Popover.Header as="h3">Rate our meal</Popover.Header>
       <Popover.Body>
-        <Rating
-          initialValue={MealObject.rating.toString()}
-          className="pb-3 mpe-1"
-          size="25px"
-          
-        />
+        <Rating allowHalfIcon="true" className="pb-3 mpe-1" size="25px" />
       </Popover.Body>
     </Popover>
   );
@@ -100,6 +95,7 @@ const MealDetails = () => {
       <li>
         <span>
           <img
+            alt="deliveredIngredients"
             src={deliveredIngredientIcon}
             className="me-1 text-start"
             style={{ width: "20px" }}
@@ -115,6 +111,7 @@ const MealDetails = () => {
       <li>
         <span>
           <img
+            alt="homeIngrendients"
             src={homeIngredientIcon}
             className="me-1 text-start"
             style={{ width: "20px" }}
@@ -159,6 +156,7 @@ const MealDetails = () => {
                 <span>
                   <img
                     src={timeOnHover}
+                    alt="time"
                     className="h-25 me-2"
                     style={{ width: "7%" }}
                   />
@@ -168,6 +166,7 @@ const MealDetails = () => {
               <li className="mt-2 fw-bolder fs-5">
                 <span>
                   <img
+                    alt="calories"
                     src={caloriesOnHover}
                     className="h-25 me-2"
                     style={{ width: "7%" }}
@@ -178,6 +177,7 @@ const MealDetails = () => {
               <li className="mt-2 fw-bolder" style={{ fontSize: "16px" }}>
                 <span>
                   <img
+                    alt="chef"
                     src={Chef}
                     className="h-25 py-1 me-2"
                     style={{ marginLeft: "0px", width: "7%" }}
@@ -224,7 +224,12 @@ const MealDetails = () => {
             </Button>
             <OverlayTrigger trigger="click" placement="right" overlay={popover}>
               <span className="ms-1">
-                <img src={rateIcon} className="mt-1" style={{ width: "10%" }} />
+                <img
+                  src={rateIcon}
+                  className="mt-1"
+                  style={{ width: "10%" }}
+                  alt="rate"
+                />
               </span>
             </OverlayTrigger>
           </Col>
@@ -344,7 +349,7 @@ const MealDetails = () => {
               >
                 Take a look , our Chef is ready to help you make this meal
               </p>
-              {/* Video url ===  */}
+              {/* Video url ===  MealObjet.video */}
               <ReactPlayer
                 url="https://www.youtube.com/watch?v=ulhRORJpuBM"
                 height="600px"
@@ -415,7 +420,7 @@ const MealDetails = () => {
           slidesToSlide={1}
           swipeable
         >
-          <MealTempate className="mx-2 py-5" />
+          <MealTempate className="mx-2" />
           <MealTempate className="mx-2" />
           <MealTempate className="mx-2" />
           <MealTempate className="mx-2" />

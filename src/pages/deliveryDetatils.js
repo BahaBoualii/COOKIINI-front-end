@@ -130,7 +130,7 @@ const DeliveryDetails = (props) => {
           </Row>
         </Container>
       </div>
-      )
+      
     </div>
   );
 };

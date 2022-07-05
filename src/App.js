@@ -17,6 +17,8 @@ import DeliveryDetails from './pages/deliveryDetatils';
 import MyOrders from './pages/myorders';
 import Confirmation from './pages/confirmation';
 import MealDetails from './pages/mealDetatils';
+import PlanNextStep from './pages/plannextstep';
+import SignInOptions from './pages/signinoptions';
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -44,8 +46,8 @@ function App() {
           <Route path='/orders' element={<MyOrders/>}/>
           <Route path='/confirmed_order' element={<Confirmation/>}/>
           <Route path='/mealname_details' element={<MealDetails/>}/>
-          
-
+          <Route path='/plan_next_step' element={<PlanNextStep/>}/>  
+          <Route path='signin_options' element={<SignInOptions/>}/>
         </Routes>
     </Router>
   );
