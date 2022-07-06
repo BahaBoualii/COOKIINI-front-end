@@ -14,6 +14,9 @@ import { Container, Row, Col, InputGroup, Form } from "react-bootstrap";
 */
 
 const MyProfile = (props) => {
+  const [userNewPassBox1, setUserNewPassBox1] = useState("password");
+  const [userNewPassBox2, setUserNewPassBox2] = useState("password");
+
   const userPhoneNumber = "55 555 555";
   const userEmail = "foulenbenfoulen@gmail.com";
   const userBirthDay = "14 - 03 - 2001";
@@ -28,20 +31,26 @@ const MyProfile = (props) => {
           }}
         >
           <h1 className="fw-bold mb-5 display-5">My Profile</h1>
-          <Row>
-            <Col style={{ borderRight: "solid" }}>
-              <p className="fw-bold fs-4 mt-3" style={{color:"#019267"}}>First Name</p>
-              <p className="fs-">Foulen</p>
-              <p className="fw-bold fs-4" style={{color:"#019267"}}>Last Name</p>
+          <Row className="text-xs-center">
+            <Col className="mx-lg-5">
+              <p className="fw-bold fs-4 mt-3" style={{ color: "#019267" }}>
+                First Name
+              </p>
+              <p className="fs-5">Foulen</p>
+              <p className="fw-bold fs-4" style={{ color: "#019267" }}>
+                Last Name
+              </p>
               <p className="fs-5">Ben Foulen</p>
-              <p className="fw-bold fs-4" style={{color:"#019267"}}>Phone Number</p>
+              <p className="fw-bold fs-4" style={{ color: "#019267" }}>
+                Email address
+              </p>
               <input
-                type="text"
+                size="25"
                 className="bg-transparent"
-                defaultValue={"(+216) " + userPhoneNumber}
+                defaultValue={"userEmailAddress@gmail.com"}
                 style={{ outline: "none", border: "none" }}
               ></input>
-              <span>
+              <span className="ms-lg-2 ps-2 d-none d-xl-inline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -57,40 +66,96 @@ const MyProfile = (props) => {
                   />
                 </svg>
               </span>
-              <hr className="w-50" />
+              <hr className="w-75" />
             </Col>
-            <Col className="text-start mt-5 pt-5 ms-5">
-              <p className="fw-bold fs-4" style={{color:"#019267"}}>Email address</p>
+            <Col className="text-start mt-3 ms-lg-5">
+            <p className="fw-bold fs-4" style={{ color: "#019267" }}>
+                New password
+              </p>
               <input
-                type="text"
-                className="bg-transparent w-50"
-                maxLength="35"
-                defaultValue={userEmail}
+                placeholder="New password"
+                type={userNewPassBox2}
+                className="bg-transparent"
                 style={{ outline: "none", border: "none" }}
+                size="20"
               ></input>
-              <hr className="w-50 mb-5" />
-              <div className="text-center mt-5">
-                <Button
-                  variant="secondary"
-                  className="px-4 py-2 btn btn-transparent bg-transparent fw-bold text-center fs-3 "
-                  style={{
-                    color: "#019267",
-                    border: "solid",
-                    borderRadius: "20px",
+              <span className="ms-lg-5 ms-sm-1 ps-lg-3 ps-sm-1 d-none d-xl-inline">
+                <svg
+                  onClick={() => {
+                    userNewPassBox1 === "password"
+                      ? setUserNewPassBox1("text")
+                      : setUserNewPassBox1("password");
                   }}
-                  size="md "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
                 >
-                  Save <br />
-                  Changes
-                </Button>
-              </div>
+                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg>
+              </span>
+              <hr className="w-75" />
+              <p className="fw-bold fs-4" style={{ color: "#019267" }}>
+                Confirm new password
+              </p>
+              <input
+                placeholder="Confirm new password"
+                type={userNewPassBox2}
+                className="bg-transparent"
+                style={{ outline: "none", border: "none" }}
+                size="20"
+              ></input>
+              <span className="ms-lg-5 ms-sm-1 ps-lg-3 ps-sm-1 d-none d-xl-inline">
+                <svg
+                  onClick={() => {
+                    userNewPassBox2 === "password"
+                      ? setUserNewPassBox2("text")
+                      : setUserNewPassBox2("password");
+                  }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+                </svg>
+              </span>
+              <hr className="w-75" />
             </Col>
           </Row>
-          <p className="fw-bold fs-4 mt-3" style={{color:"#019267"}}>Date of birh </p>
-          <p className="fs-5">{userBirthDay}</p>
+          <div
+            className="text-center mt-5 me-5"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <Button
+              variant="secondary"
+              className="px-4 py-2 btn btn-transparent bg-transparent fw-bold text-center fs-3 "
+              style={{
+                color: "#019267",
+                border: "solid",
+                borderRadius: "20px",
+              }}
+              size="md "
+            >
+              Save <br />
+              Changes
+            </Button>
+          </div>
         </Container>
       </div>
-      <br/><br/><br/>
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   );

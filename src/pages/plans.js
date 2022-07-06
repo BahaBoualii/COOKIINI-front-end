@@ -146,7 +146,14 @@ const Plans = () => {
           </div>
           <PricingCard people={nbPeople} meals={nbMeals}></PricingCard>
           <div id="BottomSection">
-            <div id="Reder">
+          <div>
+              <Link to="/meals" style={{textDecoration:"none"}}>
+                <a id="shop" href="">
+                  Want to shop without a plan ? Browse our Meals
+                </a>
+              </Link>
+            </div>
+            <div id="Reder" className="mt-2">
               <a href="">
                 <img
                   src={require("../assets/right.png")}
@@ -155,13 +162,7 @@ const Plans = () => {
                 ></img>
               </a>
             </div>
-            <div>
-              <Link to="/meals">
-                <a id="shop" href="">
-                  Want to shop without a plan ? Browse our Meals
-                </a>
-              </Link>
-            </div>
+            
           </div>
         </div>
         <br />

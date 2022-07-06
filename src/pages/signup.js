@@ -112,14 +112,14 @@ const Signup = () => {
                 </p>
                 <div
                   className="text-start fs-5 fw-normal text-dark"
-                  style={{ display: "flex" }}
+                  style={{ display: "flex",marginTop:"-8px" }}
                 >
-                  <Form.Check className="me-lg-3 me-md-3 me-sm-4" type="radio" id="hasPrevExperience" label="Yes" />
+                  <Form.Check className="me-lg-3 me-md-3 me-sm-4" type="radio" id="hasPrevExperience" label="Yes" name="prevExperience" />
                   <Form.Check
+                    name="prevExperience"
                     type="radio"
-                    id="hasNotPrevExperience"
-                    label="No"
-                  />
+                    id="hasNoPrevExperience"
+                    label="No"/>
                 </div>
               </>
             )}
