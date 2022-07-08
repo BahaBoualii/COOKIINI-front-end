@@ -362,13 +362,13 @@ const MealDetails = () => {
       <Container
         className="text-center my-5 w-75"
         style={{
-          display: "flex",
+          display: "inline-flex",
           alignContent: "space-evenly",
           backgroundColor: "#FFF9F0",
         }}
       >
         <Carousel
-          className="w-100 mt-5"
+          className="mt-5"
           additionalTransfrom={0}
           arrows
           autoPlaySpeed={3000}
@@ -391,7 +391,7 @@ const MealDetails = () => {
                 max: 3000,
                 min: 1024,
               },
-              items: 3,
+              items: 4,
               partialVisibilityGutter: 40,
             },
             mobile: {
@@ -420,11 +420,11 @@ const MealDetails = () => {
           slidesToSlide={1}
           swipeable
         >
-          <MealTempate className="mx-2" />
-          <MealTempate className="mx-2" />
-          <MealTempate className="mx-2" />
-          <MealTempate className="mx-2" />
-          <MealTempate className="mx-2" />
+          <MealTempate  />
+          <MealTempate  />
+          <MealTempate  />
+          <MealTempate  />
+          <MealTempate  />
         </Carousel>
       </Container>
       <Footer />
