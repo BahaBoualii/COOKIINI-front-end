@@ -39,7 +39,7 @@ const Home = () => {
                 className="img-fluid mt-5 pt-5"
                 alt="cookiini"
               />
-              <img src={Slogan} className="img-fluid mt-2" alt="Slogan" />
+              <img src={Slogan} className="img-fluid mt-2" alt="Slogan of Cookiini" />
             </div>
           </Col>
         </Row>
