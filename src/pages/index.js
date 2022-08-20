@@ -12,9 +12,9 @@ import "react-multi-carousel/lib/styles.css";
 import ReactPlayer from "react-player";
 import BrowseMealIcon from "../assets/image 1.png";
 import DeliverMealIcon from "../assets/Delivery 2.png";
-import YoungChef from "../assets/youngchef.png"
+import YoungChef from "../assets/youngchef.png";
 import MakingMealIcon from "../assets/image 2.png";
-import WhatAreWe from "../assets/image 3.png"
+import WhatAreWe from "../assets/image 3.png";
 
 const Home = () => {
   const screenHeight = window.screen.availHeight + "px";
@@ -45,17 +45,24 @@ const Home = () => {
         </Row>
       </Container>
       <Container className="mt-5">
-        <Row style={{ display: "flex" }} className="text-xxs-center mx-2">
-          <Col className="fs-2 fs-sm-1" sm={5} md={3} style={{ width: "10em" }}>
-            Explore our plans. Our recipes are healthy, easy to make and they
-            are{" "}
-            <span className="fw-bolder fs-1" style={{ color: "#019267" }}>
-              FRESH
-            </span>
-            .
+        <Row style={{ display: "flex" }} className="text-xxs-center mx-2  d-sm-block d-md-flex">
+          <Col
+            className="fs-2 fs-sm-1"
+            sm={12}
+            lg={3}
+            md={12}
+          >
+            <p className="w-100">
+              Explore our plans. Our recipes are healthy, easy to make and they
+              are{" "}
+              <span className="fw-bolder fs-1" style={{ color: "#019267" }}>
+                FRESH
+              </span>
+              .
+            </p>
           </Col>
-          <Col md={9} lg={9} className="justify-content-end">
-            <Carousel
+          <Col md={12} lg={9} sm={12} className="justify-content-end">
+            <Carousel 
               additionalTransfrom={0}
               arrows
               autoPlaySpeed={3000}
@@ -195,33 +202,33 @@ const Home = () => {
           >
             How to ?
           </p>
-          <Row style={{display:"flex",justifyContent:"center",alignContent:"center"}}>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
             <Col>
               <img
                 src={BrowseMealIcon}
                 style={{ height: "280px", width: "280px" }}
               />
-              <p className="fs-4" >
-                Browse our different delicous meals
-              </p>
+              <p className="fs-4">Browse our different delicous meals</p>
             </Col>
             <Col>
               <img
                 src={DeliverMealIcon}
                 style={{ height: "280px", width: "280px" }}
               />
-              <p className="fs-4">
-                Get your meal package within 48 hours
-              </p>
+              <p className="fs-4">Get your meal package within 48 hours</p>
             </Col>
-            <Col className="text-center" >
+            <Col className="text-center">
               <img
                 src={MakingMealIcon}
                 style={{ height: "280px", width: "280px" }}
               />
-              <p className="fs-4">
-                Enjoy making your meal
-              </p>
+              <p className="fs-4">Enjoy making your meal</p>
             </Col>
           </Row>
         </Container>
@@ -231,7 +238,7 @@ const Home = () => {
           <Row>
             {" "}
             <Col className="fs-1 my-5 ms-lg-5">
-              <p style={{width:"13em"}}>
+              <p style={{ width: "13em" }}>
                 You have some hidden talent and you want to sell your recipes ?
                 We got you, just create your{" "}
                 <span className="fw-bolder fs-1" style={{ color: "#019267" }}>
@@ -240,8 +247,20 @@ const Home = () => {
                 account and kick start your journey with us.
               </p>
             </Col>
-            <Col className="d-none d-xxl-block" style={{display:"flex",justifyContent:"center",alignContent:"center"}}>
-            <img src={YoungChef} alt="chefPicture" className="me-5 mb-5" style={{height:"500px",width:"500px",marginTop:"-30px"}}/>
+            <Col
+              className="d-none d-xxl-block"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
+              <img
+                src={YoungChef}
+                alt="chefPicture"
+                className="me-5 mb-5"
+                style={{ height: "500px", width: "500px", marginTop: "-30px" }}
+              />
             </Col>
           </Row>
         </Container>
@@ -257,20 +276,22 @@ const Home = () => {
           <Row>
             <Col className="me-3 d-none d-xl-block" md={3} lg={3} xl={3}>
               <img
-              src={WhatAreWe}
+                src={WhatAreWe}
                 className="img-fluid"
-                style={{ height: "350px", width: "350px" ,marginTop:"-120px" }}
+                style={{ height: "350px", width: "350px", marginTop: "-120px" }}
               />
-             </Col>
+            </Col>
             <Col>
               <p className="display-5 text-start">
-              <b>COOKIINI</b> is Tunisia's first high-quality food service platform that delivers pre-portioned fresh ingredients and authentic recipes to make tasty and healthy food at home.
+                <b>COOKIINI</b> is Tunisia's first high-quality food service
+                platform that delivers pre-portioned fresh ingredients and
+                authentic recipes to make tasty and healthy food at home.
               </p>
             </Col>
           </Row>
         </Container>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
